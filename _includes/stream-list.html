@@ -1,0 +1,87 @@
+<div class="stream">
+    <style>
+        .stream a{
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            border: solid;
+            border-color: black;
+            color: black;
+            font-family: 'Constantine';
+            font-size: 20px;
+            padding: 10px;
+            margin-bottom: 25px;
+            transition-duration: 0.4s;
+        }
+
+        .stream a:hover{
+            background-color: black;
+            color: white;
+        }
+
+        h2{
+            font-family: 'Constantine';
+            color:black;
+            font-size: 36px;
+            text-align: center;
+        }
+    </style>
+    <h2>Stream / Download on:</h2>
+    {% if page.spotify %}
+        <a href="{{page.spotify}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-spotify', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-brands fa-spotify" style="font-size: 36px;line-height: 1.25;"></i><br>STREAM ON SPOTIFY</a>
+    {% endif %}
+    {% if page.youtube_music %}
+        <a href="{{page.youtube_music}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-youtube-music', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-brands fa-youtube" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM ON YOUTUBE MUSIC</a>
+    {% endif %}
+    {% if page.apple_music %}
+        <a href="{{page.apple_music}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-apple-music', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-brands fa-apple" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM ON APPLE MUSIC</a>
+    {% endif %}
+    {% if page.deezer %}
+        <a href="{{page.deezer}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-deezer', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-brands fa-deezer" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM ON DEEZER</a>
+    {% endif %}
+    {% if page.napster %}
+        <a href="{{page.napster}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-napster', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-brands fa-napster" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM ON NAPSTER</a>
+    {% endif %}
+    {% if page.amazon_music %}
+        <a href="{{page.amazon_music}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-amazon-music', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-brands fa-amazon" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM/DOWNLOAD ON AMAZON MUSIC</a>
+    {% endif %}
+    {% if page.itunes %}
+        <a href="{{page.itunes}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-itunes', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-brands fa-apple" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>DOWNLOAD ON ITUNES</a>
+    {% endif %}
+    {% if page.tidal %}
+        <a href="{{page.tidal}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-tidal', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-solid fa-music" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM/DOWNLOAD ON TIDAL</a>
+    {% endif %}
+    {% if page.pandora %}
+        <a href="{{page.pandora}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-pandora', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-solid fa-music" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM ON PANDORA</a>
+    {% endif %}
+    {% if page.claro_musica %}
+        <a href="{{page.claro_musica}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-claro-musica', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-solid fa-music" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM/DOWNLOAD ON CLARO MUSICA</a>
+    {% endif %}
+    {% if page.anghami %}
+        <a href="{{page.anghami}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-anghami', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-solid fa-music" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM ON ANGHAMI</a>
+    {% endif %}
+    {% if page.melon %}
+        <a href="{{page.melon}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-melon', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-solid fa-music" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM/DOWNLOAD ON MELON</a>
+    {% endif %}
+    {% if page.kanjian %}
+        <a href="{{page.kanjian}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-kanjian', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-solid fa-music" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM/DOWNLOAD ON KANJIAN</a>
+    {% endif %}
+    {% if page.netease %}
+        <a href="{{page.netease}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-netease', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-solid fa-music" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM/DOWNLOAD ON NETEASE</a>
+    {% endif %}
+    {% if page.tencent %}
+        <a href="{{page.tencent}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-tencent', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-solid fa-music" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM/DOWNLOAD ON TENCENT</a>
+    {% endif %}
+    {% if page.iheart %}
+        <a href="{{page.iheart}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-iheart', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-solid fa-music" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM ON IHEART RADIO</a>
+    {% endif %}
+    {% if page.saavn %}
+        <a href="{{page.saavn}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-saavn', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-solid fa-music" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM ON SAAVN</a>
+    {% endif %}
+    {% if page.bugs %}
+        <a href="{{page.bugs}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-bugs', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-solid fa-music" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM/DOWNLOAD ON BUGS</a>
+    {% endif %}
+    {% if page.awa %}
+        <a href="{{page.awa}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'stream-awa', '{{$score->score_type}}-{{$score->score_url}}')"><i class="fa-solid fa-music" style="font-style: normal;font-size: 36px;line-height: 1.25;"></i><br>STREAM ON AWA</a>
+    {% endif %}
+</div>

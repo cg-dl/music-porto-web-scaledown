@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Constantine";
+    src: url("webfonts/constantine-webfont.woff") format("woff");
+}
+
+body{
+    margin: auto;
+    background-image: linear-gradient(black,#4B4A54);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+h1{
+    font-family: 'Constantine';
+    color: white;
+    font-size: 7vw;
+    text-align: center;
+}

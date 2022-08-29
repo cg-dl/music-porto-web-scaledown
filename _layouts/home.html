@@ -1,0 +1,107 @@
+---
+layout: default
+---
+<style>
+    h3{
+        font-family: 'Constantine';
+        color: #2A272A;
+        font-size: 4vw;
+    }
+    .work-meta{
+        list-style-type: none;
+        color: #677381;
+        font-family: 'Constantine';
+        font-size: 16px;
+        text-align: justify;
+        padding-left: 0;
+    }
+    .works-cat{
+        margin-bottom: 10px;
+        font-size: 42px;
+    }
+    .works-title{
+        margin: 0;
+        padding-top: 0;
+    }
+    .email{
+        text-align: center;
+    }
+</style>
+<div class="black-space">
+    <h1>Davin Leonardo</h1>
+    <h3 style="margin-bottom: 0; text-align: center;">Composer/Arranger</h3>
+    <div class="button" id="mobile" style="text-align: center;">
+        <a style="margin: 25px;" href="/#about-me">About Me</a>
+    </div>
+</div>
+<div class="white-space" id="about-me" style="padding-bottom: 5%;">
+    <h2>About Me</h2>
+    <div class="bio">
+        <div class="bio-img">
+            <img src={{"/Assets/aboutme-photo.jpg" | relative_url }} alt="Home | Davin Leonardo" style="width: 100%;height: auto;">
+        </div>
+        <div class="bio-text" style="padding-top: 2%;display: table;">
+            <p>
+                C. G. Davin Leonardo is an amateur composer of Classical music and Sacred Music focusing on choral composition. He started writing music when he was 14 and learned piano and violin by self-taught. 
+                <br/><br/>
+                Davin loves Classical music since he was 11. His love for Classical music motivated him to learn piano at 11 and violin at 14. Since then, he found enjoyment when he wrote undemanding instrumental music (mostly unpublished waltzes). 
+                <br/><br/>
+                During his high school years, Davin also found himself fond of singing Classical arias and participated in his school choir. Currently, he goes to a university in Jakarta and become a member of the university choir. He learns more about choir and singing and sings at Baritone range. 
+                <br/><br/>
+                His composition styles are influenced by Renaissance, Baroque, and Classical composers, with some of his signature touches. Davin likes to compose music "that sounds beautiful and complex but accessible by most." He also creates some arrangements of old hymns and Church music. 
+            </p>
+        </div>
+        <div class="button" style="text-align: center;">
+            <a href="/#contacts" id="mobile">Get in touch</a>
+        </div>
+    </div>
+    {% assign links = site.composition | concat: site.arrangement | where_exp:"link", "link.stream_visible == true" %}
+    {% include release.html %}
+    <div class="works-container">
+        {% assign composition = site.composition | sort: 'date_release' | last %}
+        {% assign arrangement = site.arrangement | sort: 'date_release' | last %}
+        {% assign date_format = "%b %-d, %Y" %}
+        <h2 class="works-cat">Recent Composition</h2>
+        <span class="work-meta">{{ composition.date_release | date: date_format }}</span>
+        <h3 class="works-title">
+            <a class="work-link" href={{"" | append: composition.url | relative_url}}>
+                {{ composition.title | escape }}
+            </a>
+        </h3>
+        <p>
+            {{ composition.description | truncatewords: 50 }}
+        </p>
+        <div class="button">
+            <a href="{{ composition.url | relative_url }}">Learn More...</a>
+        </div>
+    </div>
+    <div class="works-container">
+        <h2 class="works-cat">Recent Arrangement</h2>
+        <span class="work-meta">{{ arrangement.date_release | date: date_format }}</span>
+        <h3 class="works-title">
+            <a class="work-link" href={{"" | append: arrangement.url | relative_url}}>
+                {{ arrangement.title | escape }}
+            </a>
+        </h3>
+        <p>
+            {{ arrangement.description | truncatewords: 50 }}
+        </p>
+        <div class="button">
+            <a href="{{ arrangement.url | relative_url }}">Learn More...</a>
+        </div>
+    </div>
+</div>
+<div class="gradient-space" id="contacts">
+    <div>
+        <h1 style="padding-bottom: 0;color: black;">Contacts</h1>
+        <div class="email" id="email">
+            <p style="text-align: center;font-family: 'Constantine';">
+                C. G. Davin Leonardo<br/>
+                Indonesia<br/>
+                Email me at:
+            </p>
+            <button class="view" id="view" onclick="reveal()" style="margin: 0;">View email address</button>
+        </div>
+        <script type="text/javascript" src={{"/Assets/protect.js" | relative_url}}></script>
+    </div>
+</div>

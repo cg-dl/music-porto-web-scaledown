@@ -1,0 +1,43 @@
+{% assign splitQuery = page.url | split: '/' %}
+{% capture query %}
+    item.url contains '{{splitQuery[-1]}}'
+{% endcapture %}
+{% assign work = site.composition | concat: site.arrangement | find_exp: "item", query %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://davinleonardo.me">
+    <link rel="icon" href="/Assets/favicon.png">
+    <link rel="stylesheet" href="/Assets/stream.css">
+    <link rel="stylesheet" href="/Assets/font-awesome/all.min.css">
+    <title>Stream {{ work.title }} | Davin Leonardo</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173444940-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-173444940-1');
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRQW2E5YZJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-ZRQW2E5YZJ');
+    </script>
+</head>
+<body>
+    <div class="black-space">
+        <div class="album-art">
+            <img src="{{ work.album_art }}">
+        </div>
+        <h1>{{ work.title }}</h1>
+    </div>
+    <div class="white-space">
+        {% include stream-list.html %}
+    </div>
+</body>
+</html>

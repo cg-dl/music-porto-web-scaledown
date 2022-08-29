@@ -1,0 +1,152 @@
+@font-face {
+    font-family: "Constantine";
+    src: url("webfonts/constantine-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Goudy";
+    src: url("webfonts/oflgoudystmtt-webfont.woff") format("woff");
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.topnav {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: auto;
+    white-space: nowrap
+}
+
+.topnav a {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-family: 'Constantine';
+    font-size: 20px;
+    padding: 25px;
+    transition-duration: 0.4s;
+}
+
+.topnav a:hover{
+    background-color: white;
+    color: black;
+}
+
+.topnav a:active{
+    color: #82A0AA;
+    background-color: white;
+    color: black;
+}
+
+.black-space{
+    margin: auto;
+    background-image: linear-gradient(#4B4A54,black);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ig-id{
+    font-weight: bold; 
+    color: #677381; 
+    text-align: center;
+    font-family: 'Goudy';
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.white-space{
+    padding-left: 6vw;
+    padding-right: 6vw;
+    padding-bottom: 10%;
+    justify-content: center;
+}
+
+.ig-profile{
+    display: grid;
+    justify-content: center;
+}
+
+.ig-profile img{
+    border-radius: 50%;
+    padding-bottom: 5px;
+    max-width: 150px;
+    max-height: 150px;
+}
+
+h1{
+    padding-bottom: 2%;
+    font-family: 'Constantine';
+    color: white;
+    font-size: 9vw;
+    text-align: center;
+}
+
+h2{
+    font-family: 'Constantine';
+    color:black;
+    font-size: 48px;
+    text-align: center;
+}
+
+h3{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    font-family: 'Constantine';
+    font-size: 20px;
+}
+
+.white-space a{
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    border: solid;
+    border-color: black;
+    color: black;
+    font-family: 'Constantine';
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 25px;
+    transition-duration: 0.4s;
+}
+
+:not(.ig-profile, .topnav) > a:hover{
+    background-color: black;
+    color: white;
+}
+
+:not(.ig-profile, .topnav) > a:active{
+    color: #82A0AA;
+    background-color: black;
+    color: white;
+}
+
+p{
+    font-family: 'Goudy';
+    color: black;
+    font-size: 20px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 1140px) {
+    .topnav{
+        justify-content: left;
+    }
+    .black-space{
+        height: 50vh;
+    }
+}

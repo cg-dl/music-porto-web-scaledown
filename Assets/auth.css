@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Constantine";
+    src: url("webfonts/constantine-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Goudy";
+    src: url("webfonts/oflgoudystmtt-webfont.woff") format("woff");
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(black,#4B4A54);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+h1{
+    font-family: 'Constantine';
+    color: white;
+    font-size: 7vw;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    font-family: 'Goudy';
+    color: white;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+p{
+    font-family: 'Goudy';
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}

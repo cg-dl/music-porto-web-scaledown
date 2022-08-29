@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Constantine";
+    src: url("webfonts/constantine-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Goudy";
+    src: url("webfonts/oflgoudystmtt-webfont.woff") format("woff");
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.black-space{
+    background-image: linear-gradient(#4B4A54,black);
+    display: grid;
+    justify-content: center;
+    padding: 5%;
+}
+
+.album-art{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+img{
+    width: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    height:auto;
+    border: 1px solid white;
+    box-shadow: 10px 20px 15px black;
+}
+
+.white-space{
+    padding-left: 6vw;
+    padding-right: 6vw;
+    padding-bottom: 10%;
+    justify-content: center;
+}
+
+h1{
+    font-family: 'Constantine';
+    color: white;
+    font-size: 48px;
+    text-align: center;
+    margin: 10px;
+}
+
+h2{
+    font-family: 'Constantine';
+    color:black;
+    font-size: 36px;
+    text-align: center;
+}
+
+h3{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    font-family: 'Constantine';
+    font-size: 20px;
+}
+
+p{
+    font-family: 'Goudy';
+    color: black;
+    font-size: 20px;
+    text-align: justify;
+}

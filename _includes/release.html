@@ -1,0 +1,21 @@
+<div class="releases">
+    {% if links %}
+        {% assign links = links | sort: 'date_stream' | reverse %}
+        <h2 id="stream">Stream now:</h2>
+        <div class="album-arts">
+            {% for l in links %}
+                <div class="album-art">
+                    {% assign split = l.url | split: '/' %}
+                    <a href={{"/stream/" | append: split[-1]  }}>
+                        <img src="{{ l.album_art }}">
+                        <div class="overlay"></div>
+                        <div class="play-container">
+                            <i class="fa-solid fa-circle-play" style="font-size:100px;"></i>
+                        </div>
+                    </a>
+                    <h3>{{$l.title}}</h3>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}           
+</div>

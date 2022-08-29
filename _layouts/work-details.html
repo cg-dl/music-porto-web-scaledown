@@ -1,0 +1,106 @@
+---
+layout: default
+publisher:
+    - ""
+    - " via SheetMusicPlus"
+    - " via SheetMusicDirect"
+---
+
+<div class="white-space">
+    <style>
+        .topnav {
+          background-color: #2A272A;
+          background-image: none;
+        }
+        body{
+          margin-top: 55px;
+        }
+        h2{
+          padding-top: 25px;
+          margin-bottom: 0px;
+        }
+        li{
+          font-family: 'Goudy';
+          color: black;
+          font-size: 20px;
+          text-align: justify;
+        }
+        .white-space{
+          display:flex;
+          justify-content: space-around;
+        }
+        .main-content{
+          max-width: 65%;
+        }
+        .side-content{
+          max-width: 30%;
+        }
+        .button.hide{
+          display: none;
+        }
+
+        @media screen and (max-width: 960px) {
+          .side-content{
+            display: none;
+          }
+          .main-content{
+            max-width: 100%;
+          }
+          .button.hide{
+            display: block;
+          }
+        }
+    </style>
+    <div class="main-content">
+      <article class="work-details">
+        <header class="work-header">
+          <h2 class="work-title">{{ page.title }}</h2>
+          <p class="work-meta" style="font-style: italic;">
+            {% assign date_format = "%b %-d, %Y" %}
+            {% case page.score_type %}
+                {% when 'composition' %}
+                    Composed on 
+                    {{ page.date_release | date: date_format }}
+                    by C. G. Davin Leonardo
+                {% when 'arrangement' %}
+                    Arranged on 
+                    {{ page.date_release | date: date_format }}
+                    ; Composed by {{page.composer}}
+            {% endcase %}
+          </p>
+        </header>
+        <div class="work-content">
+            {% assign date_format = "%b %-d, %Y" %}
+            {% if page.score_download_links.size > 0 %}
+                {% for link in page.score_download_links %}
+                    {% capture number %}{{ forloop.length }}{% endcapture %}
+                    {% assign index1 = forloop.index %}
+                    {% if link %}
+                        {% for publisher in layout.publisher %}
+                            {% capture number %}{{ forloop.length }}{% endcapture %}
+                            {% assign index2 = forloop.index %}
+                            {% if index1 == index2 %}
+                                <div class="button">
+                                    <a href="{{link}}" target="_blank" onclick="ga('send', 'event', 'buttons', 'download', '{{page.url}}')">Download sheet music{{publisher}}!</a>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            {% if page.score_embed_tags_above %}
+                {{ page.score_embed_tags_above }}
+            {% endif %}
+            <p style="white-space:pre-line;">
+                {{ page.description }}
+            </p>
+            {% if page.score_embed_tags_below %}
+                {{ page.score_embed_tags_below }}
+            {% endif %}
+        </div>
+      </article>
+      <div class="button hide" style="margin-top: 25px;">
+          <a href={{"" | append: page.score_type | relative_url }}>View All {{page.score_type | append:'s' | capitalize}}</a>
+      </div>
+    </div>
+</div>

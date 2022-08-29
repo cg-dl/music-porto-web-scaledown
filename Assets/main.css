@@ -1,0 +1,186 @@
+@font-face {
+    font-family: "Constantine";
+    src: url("webfonts/constantine-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Goudy";
+    src: url("webfonts/oflgoudystmtt-webfont.woff") format("woff");
+}
+
+@media screen and (max-width: 600px) {
+    iframe{
+        width: 100%;
+        height: auto;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.bio-img{
+    size: inherit;
+    padding-right: 6vw;
+    float: left;
+    width: fit-content;
+}
+
+.black-space{
+    margin: auto;
+    background-image: linear-gradient(#4B4A54,white);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.white-space{
+    padding-left: 6vw;
+    padding-right: 6vw;
+    padding-bottom: 10%;
+}
+
+.gradient-space{
+    background-image: linear-gradient(white,#4B4A54);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1{
+    font-family: 'Constantine';
+    color: white;
+    font-size: 7vw;
+    text-align: center;
+    margin: 0;
+}
+
+h2{
+    font-family: 'Constantine';
+    color: black;
+    font-size: 48px;
+    text-align: left;
+}
+
+:not(.works-cat) h2::before { 
+    display: block; 
+    content: " "; 
+    margin-top: -75px; 
+    height: 75px; 
+    visibility: hidden; 
+    pointer-events: none;
+}
+
+h4{
+    padding-top: 25px;
+    margin-bottom: 0px;
+    font-family: 'Constantine';
+    font-size: 36px;
+    color: black;
+}
+
+a{
+    font-family: 'Goudy';
+    color: black;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+p{
+    font-family: 'Goudy';
+    color: #2A272A;
+    font-size: 20px;
+    text-align: justify;
+}
+
+.works-container{
+    margin-top: 50px;
+}
+
+@media screen and (max-width: 600px){
+    .works-container{
+        display: block;
+        margin-top: 20px;
+    }
+    
+    .works-flex{
+        width: 100%;
+        height: fit-content;
+    }
+}
+
+.works-list{
+    list-style-type: none;
+    color: #677381;
+    font-family: 'Constantine';
+    font-size: 16px;
+    text-align: justify;
+    padding-left: 0;
+  }
+
+  h3 a{
+    font-family: 'Constantine';
+    color:  black;
+    font-size: 28px;
+    text-align: left;
+  }
+
+.button a{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: solid;
+    border-color: black;
+    color: black;
+    font-family: 'Constantine';
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 25px;
+    transition-duration: 0.4s;
+}
+
+.button a:hover{
+    background-color: black;
+    color: white;
+}
+
+.button a:active{
+    color: #82A0AA;
+    background-color: black;
+    color: white;
+}
+
+button{
+    background-color: transparent;
+    border: solid;
+    border-color: black;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Constantine';
+    font-size: 16px;
+    padding: 10px;
+    margin-right: 59px;
+    transition-duration: 0.4s;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+button:active{
+    color: #82A0AA;
+    background-color: black;
+    color: white;
+}
+.hide{
+    display: none;
+}

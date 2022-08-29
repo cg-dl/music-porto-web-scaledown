@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="canonical" href="https://davinleonardo.me">
+        <link rel="icon" href="/Assets/favicon.png">
+        <link rel="stylesheet" href="/Assets/welcome.css">
+        <link href="/Assets/releases.css" rel="stylesheet">
+        <link rel="stylesheet" href="/Assets/font-awesome/all.min.css">
+        <title>Landing Page | Davin Leonardo</title>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173444940-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-173444940-1');
+        </script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRQW2E5YZJ"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-ZRQW2E5YZJ');
+        </script>
+    </head>
+    <body>
+        <div class="black-space">
+            <div>
+                <h1>Hello, I'm</h1>
+                <div class="ig-profile">
+                    <a href="https://www.instagram.com/cg_davin/" target="_blank"><img src="/Assets/ig.jpg"></a>
+                    <a class="ig-id" href="https://www.instagram.com/cg_davin/" target="_blank">@cg_davin</a>
+                </div>
+                <h3>LINKS:</h3>
+            </div>
+        </div>
+        <div class="topnav">
+            <a href="https://www.youtube.com/channel/UCd75ijWyLkJ8ge_ph2-_UOw" target="_blank">VISIT MY YOUTUBE CHANNEL</a>
+            <a href={{"/composition" | relative_url }}>LISTEN TO MY COMPOSITIONS</a>
+            <a href={{"/arrangement" | relative_url }}>LISTEN TO MY ARRANGEMENTS</a>
+            <a href={{"./" | relative_url }}>VISIT MY HOMEPAGE</a>
+        </div>
+        <div class="white-space">
+            <!-- @include("components.releases") -->
+            <h2>Updates:</h2>
+        {%- assign updates = site.composition | concat: site.arrangement | sort: 'date_release' | reverse -%}
+        {%- for i in updates limit:2-%}
+            <a href="{{ i.url | relative_url }}" style="text-transform: uppercase;">{{i.title}}<br/>CLICK FOR MORE INFO</a>
+            <br/>
+        {%- endfor -%} 
+        </div>
+    </body>
+</html>
