@@ -5,6 +5,8 @@ url: "https://davinleonardo.me"
 
 permalink: /:categories/:title
 
+theme: minima
+
 collections:
   composition:
     output: true
