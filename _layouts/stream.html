@@ -4,14 +4,14 @@
     {% capture query %}
         item.url contains '{{ page.work_link }}'
     {% endcapture %}
-    {% assign work = site.composition | concat: site.arrangement | find_exp: "item", query %}
+    {% assign work = site.composition | concat: site.arrangement | where_exp: "item", query %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://davinleonardo.me">
     <link rel="icon" href="/Assets/favicon.png">
     <link rel="stylesheet" href="/Assets/stream.css">
     <link rel="stylesheet" href="/Assets/font-awesome/all.min.css">
-    <title>Stream {{ work.title }} | Davin Leonardo</title>
+    <title>Stream {{ work[0].title }} | Davin Leonardo</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173444940-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -31,9 +31,9 @@
 <body>
     <div class="black-space">
         <div class="album-art">
-            <img src="{{ work.album_art }}">
+            <img src="{{ work[0].album_art }}">
         </div>
-        <h1>{{ work.title }}</h1>
+        <h1>{{ work[0].title }}</h1>
     </div>
     <div class="white-space">
         {% include stream-list.html %}
