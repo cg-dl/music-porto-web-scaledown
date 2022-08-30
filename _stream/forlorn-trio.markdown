@@ -1,5 +1,6 @@
 ---
 layout: stream
+work_link: forlorn-trio
 spotify: https://open.spotify.com/album/6DnPcOwID8e5HoHMpso7wa
 youtube_music: https://music.youtube.com/watch?v=ujr2-niV6dc
 apple_music: https://music.apple.com/us/album/piano-trio-in-g-minor-forlorn-single/1627253077?ls=1

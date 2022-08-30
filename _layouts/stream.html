@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% assign splitQuery = page.url | split: '/' %}
     {% capture query %}
-        item.url contains '{{splitQuery[-1]}}'
+        item.url contains '{{ page.work_link }}'
     {% endcapture %}
     {% assign work = site.composition | concat: site.arrangement | find_exp: "item", query %}
     <meta charset="UTF-8">

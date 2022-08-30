@@ -1,5 +1,6 @@
 ---
 layout: stream
+work_link: la-pieta
 spotify: https://open.spotify.com/album/2O2bPJlDRzU2xFoP182Zd0
 youtube_music: https://music.youtube.com/watch?v=O1LNtrHIRIU
 apple_music: https://music.apple.com/id/album/la-piet%C3%A0-single/1620339677?ls=1
