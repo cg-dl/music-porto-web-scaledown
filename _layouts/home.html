@@ -31,29 +31,20 @@ layout: default
     <h1>Davin Leonardo</h1>
     <h3 style="margin-bottom: 0; text-align: center;">Composer/Arranger</h3>
     <div class="button" id="mobile" style="text-align: center;">
-        <a style="margin: 25px;" href="/#about-me">About Me</a>
+        <a style="margin: 25px;" href="/#contacts">Get in touch</a>
     </div>
 </div>
 <div class="white-space" id="about-me" style="padding-bottom: 5%;">
-    <h2>About Me</h2>
+    <h2>NEW WEBSITE IS COMING SOON</h2>
     <div class="bio" style="display: table;">
         <div class="bio-img">
-            <img src={{"/Assets/aboutme-photo.jpg" | relative_url }} alt="Home | Davin Leonardo" style="width: 95%;height: auto;">
         </div>
         <div class="bio-text" style="padding-top: 5%;display: table;">
             <p>
-                C. G. Davin Leonardo is an amateur composer of Classical music and Sacred Music focusing on choral composition. He started writing music when he was 14 and learned piano and violin by self-taught. 
-                <br/><br/>
-                Davin loves Classical music since he was 11. His love for Classical music motivated him to learn piano at 11 and violin at 14. Since then, he found enjoyment when he wrote undemanding instrumental music (mostly unpublished waltzes). 
-                <br/><br/>
-                During his high school years, Davin also found himself fond of singing Classical arias and participated in his school choir. Currently, he goes to a university in Jakarta and become a member of the university choir. He learns more about choir and singing and sings at Baritone range. 
-                <br/><br/>
-                His composition styles are influenced by Renaissance, Baroque, and Classical composers, with some of his signature touches. Davin likes to compose music "that sounds beautiful and complex but accessible by most." He also creates some arrangements of old hymns and Church music. 
+                (currently under revamp, new website is coming soon while this one will be still functional)
             </p>
         </div>
-        <div class="button" style="text-align: center;">
-            <a href="/#contacts" id="mobile">Get in touch</a>
-        </div>
+
     </div>
     {% assign links = site.composition | concat: site.arrangement | where_exp:"link", "link.stream_visible == true" %}
     {% include release.html %}

@@ -17,6 +17,6 @@ score_embed_tags_above: |+
 score_embed_tags_below: |+
     <iframe src="https://audiomack.com/embed/song/cgdl/la-pieta?background=1" scrolling="no" width="100%" height="252" scrollbars="no" frameborder="0"></iframe>
 stream_visible: true
-album_art: https://res.cloudinary.com/hrrowibxq/image/upload/v1649337357/album-art/composition/la-pieta_qu9wpd.webp
+album_art: /Assets/streams/la-pieta.jpg
 date_stream: 2022-04-15 +0700
 ---
